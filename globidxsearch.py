@@ -158,11 +158,11 @@ class Searcher:
 ####################################################################3
 
 parser = argparse.ArgumentParser(description='Process search results from Globalindex', add_help=False, usage='globalidxsearch.py [options]')
-parser.add_argument('-s', metavar='<STR>', type=str, help='surname')
-parser.add_argument('-f', metavar='<STR>', type=str, help='forename')
-parser.add_argument('-p', metavar='<STR>', type=str, help='place')
-parser.add_argument('-b', metavar='<INT>', type=int, default=0, help='beginning year')
-parser.add_argument('-e', metavar='<INT>', type=int, default=0, help='ending year')
+parser.add_argument('-s', metavar='<STR>', type=str, default='', help='surname')
+parser.add_argument('-f', metavar='<STR>', type=str, default='', help='forename')
+parser.add_argument('-p', metavar='<STR>', type=str, default='', help='place')
+parser.add_argument('-b', metavar='<INT>', type=int, default=1500, help='beginning year')
+parser.add_argument('-e', metavar='<INT>', type=int, default=2000, help='ending year')
 parser.add_argument('-r', metavar='<INT>', type=int, default=MAX_ROWS_PER_PAGE, help='rows per request')
 parser.add_argument('-w', metavar='<INT>', type=int, default=DEFAULT_SLEEP_SEC, help='wait between requests (in seconds)')
 try:
